@@ -5,12 +5,12 @@ class EsopipeGravity < Formula
   sha256 "1eafb832c91df9ea05b4758d0b250c30d7b57a6d0ff5103d9aac25fe778d9c1e"
   license "GPL-2.0-or-later"
 
-  bottle :disable, "Only data download"
-  
   livecheck do
     url :homepage
     regex(/href=.*?gravity-kit-(\d+(?:[.-]\d+)+)\.t/i)
   end
+
+  bottle :disable
 
   depends_on "esopipe-gravity-recipes"
 
