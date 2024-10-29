@@ -19,3 +19,4 @@ esopipe-spher-recipes
 esopipe-uves-recipes
 esopipe-visir-recipes
 esopipe-xshoo-recipes
+esopipe-gravity
