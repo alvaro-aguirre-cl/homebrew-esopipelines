@@ -10,7 +10,6 @@ class EsopipeCr2re < Formula
     regex(/href=.*?cr2re-kit-(\d+(?:[.-]\d+)+)\.t/i)
   end
 
-  
   depends_on "esopipe-cr2re-recipes"
 
   def install
