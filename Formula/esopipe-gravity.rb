@@ -10,8 +10,6 @@ class EsopipeGravity < Formula
     regex(/href=.*?gravity-kit-(\d+(?:[.-]\d+)+)\.t/i)
   end
 
-  bottle :disable
-
   depends_on "esopipe-gravity-recipes"
 
   def install
