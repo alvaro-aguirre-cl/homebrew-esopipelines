@@ -11,13 +11,6 @@ class Telluriccorr < Formula
     regex(/href=.*?telluriccorr[._-]v?(\d+(?:\.\d+)+)\.t/i)
   end
 
-  bottle do
-    root_url "https://github.com/szampier/homebrew-pipelines/releases/download/telluriccorr-4.3.1_1"
-    sha256 arm64_sonoma: "31b0aeb9f02fb1921ca0ed1e296739d285f5542428d658d37f692e20803a2d2f"
-    sha256 ventura:      "d451776e49ed047775bf543f8ce079585b3a70328e1ef2e46797b3e32e7a88d1"
-    sha256 x86_64_linux: "d56c62bf6e685a22d059696b545b68ef30a1e5dc7b790b700e819ac3a9535fcb"
-  end
-
   depends_on "cpl@7.3.2"
 
   # Fix -flat_namespace being used on Big Sur and later.

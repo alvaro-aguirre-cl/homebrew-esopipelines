@@ -11,13 +11,6 @@ class EsopipeKmosRecipes < Formula
     regex(/href=.*?kmos-kit-(\d+(?:[.-]\d+)+)\.t/i)
   end
 
-  bottle do
-    root_url "https://github.com/szampier/homebrew-pipelines/releases/download/esopipe-kmos-recipes-4.4.4_1"
-    sha256 cellar: :any,                 arm64_sonoma: "dc2ecc16c15dc0854d9bf9319563f0a9e21885d3ba75c4106f11bebcd9183fe3"
-    sha256 cellar: :any,                 ventura:      "e3e44bebbe3d90ecd3024a7f92e53f8363d6d0f4c85e7ced21cc20796ef9a3d0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "959075366a0255d66a1db2f670a0f1faed9facebdb694e7a042aba1714d3b308"
-  end
-
   depends_on "pkg-config" => :build
   depends_on "cpl@7.3.2"
   depends_on "esorex"

@@ -10,13 +10,6 @@ class EsopipeSpherRecipes < Formula
     regex(/href=.*?spher-kit-(\d+(?:[.-]\d+)+)\.t/i)
   end
 
-  bottle do
-    root_url "https://github.com/eso/homebrew-pipelines/releases/download/esopipe-spher-recipes-0.56.0"
-    sha256 cellar: :any,                 arm64_sonoma: "5fc4252b23c472d117c3ae36ede86ff82d2ff160044dc9784b8d549085fbf205"
-    sha256 cellar: :any,                 ventura:      "68111e96e9e23c645b76a8d6653bebf2d45e7b63eabf32ece844986e073d4c58"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "f6913515be1bb779b562ddf1a52f75e6288a6ebcd46a5d58a3f43a3a15f941f3"
-  end
-
   depends_on "pkg-config" => :build
   depends_on "cfitsio@4.2.0"
   depends_on "cpl@7.3.2"

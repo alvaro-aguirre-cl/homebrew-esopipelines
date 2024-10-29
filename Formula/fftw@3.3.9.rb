@@ -11,13 +11,6 @@ class FftwAT339 < Formula
     regex(%r{latest official release.*? <b>v?(\d+(?:\.\d+)+)</b>}i)
   end
 
-  bottle do
-    root_url "https://github.com/szampier/homebrew-pipelines/releases/download/fftw@3.3.9-3.3.9_1"
-    sha256 cellar: :any,                 arm64_sonoma: "4dcad3f0d956d9a64d1aa3a2b8fada0753d2fd4b199600cd981b7fa3618c04f5"
-    sha256 cellar: :any,                 ventura:      "e2775cf826ab444cb0598da60b45a529f8da0c2daf19bf807310b710da91527a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "f1d5554d9933cbdeff393de3f6b3e742e89c8fabe023581ab156e8d3e08b932d"
-  end
-
   keg_only :versioned_formula
 
   depends_on "open-mpi"

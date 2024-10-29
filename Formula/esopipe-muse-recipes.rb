@@ -11,13 +11,6 @@ class EsopipeMuseRecipes < Formula
     regex(/href=.*?muse-kit-(\d+(?:[.-]\d+)+)\.t/i)
   end
 
-  bottle do
-    root_url "https://github.com/szampier/homebrew-pipelines/releases/download/esopipe-muse-recipes-2.10.10_1"
-    sha256 cellar: :any,                 arm64_sonoma: "5b9afa7689dce4f0e27565b710b63553b597d24cfc4782e45943e966e7a4353e"
-    sha256 cellar: :any,                 ventura:      "4abe854c3a8e13f64fd00dd9257e3fc9335b240e172d7ecf4b7c8107b34ee9f6"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "2c073b55d473e84ff030a4f308e3ce957286e3506c2d9f22a756d1b0acb5809c"
-  end
-
   depends_on "pkg-config" => :build
   depends_on "cpl@7.3.2"
   depends_on "curl"

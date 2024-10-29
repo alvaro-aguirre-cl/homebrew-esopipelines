@@ -11,13 +11,6 @@ class EsopipeHawkiRecipes < Formula
     regex(/href=.*?hawki-kit-(\d+(?:[.-]\d+)+)\.t/i)
   end
 
-  bottle do
-    root_url "https://github.com/szampier/homebrew-pipelines/releases/download/esopipe-hawki-recipes-2.5.8_1"
-    sha256 cellar: :any,                 arm64_sonoma: "aefc7772f911cd77a28907c56e28bb80ce6f7c03a956b02fc8df5642050821f9"
-    sha256 cellar: :any,                 ventura:      "18d296bc49fbf2cdf121e461620870291afc35dde5830362c69cd3ed2e1c8aa3"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "9005c6b8f794cfc06e6c0d754ccc5abc6d5789ca7a960a61012f3155205b370d"
-  end
-
   depends_on "pkg-config" => :build
   depends_on "cpl@7.3.2"
   depends_on "esorex"

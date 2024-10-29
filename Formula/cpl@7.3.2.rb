@@ -11,13 +11,6 @@ class CplAT732 < Formula
     regex(/href=.*?cpl[._-]v?(\d+(?:\.\d+)+)\.t/i)
   end
 
-  bottle do
-    root_url "https://github.com/szampier/homebrew-pipelines/releases/download/cpl@7.3.2-7.3.2_2"
-    sha256 cellar: :any,                 arm64_sonoma: "2557d84e65750eda026b1cfb9008236f8e71861093d61b9c057cdf64cd8c75e0"
-    sha256 cellar: :any,                 ventura:      "ec3b6ff619b070a10163a826f93c5550149579f24d8f89f248029e77ce2b782e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "8af835d9c97a903b06f868bc5abc1c7d619261f6bcd3ddece021f1ded2696ae3"
-  end
-
   keg_only :versioned_formula
 
   depends_on "cfitsio@4.2.0"

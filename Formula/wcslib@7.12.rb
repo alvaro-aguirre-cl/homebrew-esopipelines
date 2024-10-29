@@ -11,13 +11,6 @@ class WcslibAT712 < Formula
     regex(/href=.*?wcslib[._-]v?(\d+(?:\.\d+)+)\.t/i)
   end
 
-  bottle do
-    root_url "https://github.com/szampier/homebrew-pipelines/releases/download/wcslib@7.12-7.12_2"
-    sha256 cellar: :any,                 arm64_sonoma: "a4bfa83190f8e28128540575b83988da794f5458b1549cbcc7392504ed39ae5e"
-    sha256 cellar: :any,                 ventura:      "2f9a2af79facb1cd5959263866d411f2b0abd86dd6c830b92dabc27045299881"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "d1edf2d82be34477dfab5a4e1aaaccd9131b34e7dc8ba4b0109ca53e848d3efe"
-  end
-
   keg_only :versioned_formula
 
   depends_on "cfitsio@4.2.0"

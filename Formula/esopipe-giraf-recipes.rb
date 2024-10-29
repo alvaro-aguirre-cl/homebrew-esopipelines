@@ -11,13 +11,6 @@ class EsopipeGirafRecipes < Formula
     regex(/href=.*?giraf-kit-(\d+(?:[.-]\d+)+)\.t/i)
   end
 
-  bottle do
-    root_url "https://github.com/szampier/homebrew-pipelines/releases/download/esopipe-giraf-recipes-2.16.12_1"
-    sha256 cellar: :any,                 arm64_sonoma: "8c4eb499ef2af4f0910f6f325ea7b354c3a89e065b77d85f970fc1ab6cbc28cc"
-    sha256 cellar: :any,                 ventura:      "62df1fb985b8064e2493692624353774e051920a33b594d6363594c2c147f183"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "e7ea3509c8daa59d42f2ec8decf6e765341730d460977f86678e4946c96e5bb1"
-  end
-
   depends_on "pkg-config" => :build
   depends_on "cfitsio@4.2.0"
   depends_on "cpl@7.3.2"

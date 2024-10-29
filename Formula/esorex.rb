@@ -11,13 +11,6 @@ class Esorex < Formula
     regex(/href=.*?esorex[._-]v?(\d+(?:\.\d+)+)\.t/i)
   end
 
-  bottle do
-    root_url "https://github.com/szampier/homebrew-pipelines/releases/download/esorex-3.13.9_1"
-    sha256 arm64_sonoma: "a39a3836fe52dc524d688f1767df1f78bbb07ad3b6d5c218c6ec4013324efa14"
-    sha256 ventura:      "c63b6e413e0b1e21ec7b5ee189a9077a5130222191032483f91625f7376ee977"
-    sha256 x86_64_linux: "3f67e7fa2d3db05da37df38a1dc14f64bea202867aefd7f86ccd7fe7b1c92b2f"
-  end
-
   depends_on "cpl@7.3.2"
   depends_on "gsl@2.6"
   depends_on "libffi"

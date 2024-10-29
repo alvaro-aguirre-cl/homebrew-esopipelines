@@ -10,13 +10,6 @@ class EsopipeNirpsRecipes < Formula
     regex(/href=.*?nirps-kit-(\d+(?:[.-]\d+)+)\.t/i)
   end
 
-  bottle do
-    root_url "https://github.com/szampier/homebrew-pipelines/releases/download/esopipe-nirps-recipes-3.2.0"
-    sha256 arm64_sonoma: "d97b43c18161e5a560c11038cbf83dca098f3efb6fa62611ab37974c1b4c0a23"
-    sha256 ventura:      "8482cb88a9607f804329b705e17d2d99a17c72e95e94416a4f701dfa518ae330"
-    sha256 x86_64_linux: "052712da4bf429fe59519db0c9834c4fd938901c473d0b99c96cfa1ebf96c489"
-  end
-
   depends_on "pkg-config" => :build
   depends_on "cpl@7.3.2"
   depends_on "curl"
