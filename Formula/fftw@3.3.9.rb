@@ -4,14 +4,12 @@ class FftwAT339 < Formula
   url "https://fftw.org/fftw-3.3.9.tar.gz"
   sha256 "bf2c7ce40b04ae811af714deb512510cc2c17b9ab9d6ddcf49fe4487eea7af3d"
   license all_of: ["GPL-2.0-or-later", "BSD-2-Clause"]
-  revision 2
+  revision 1
 
   livecheck do
     url :homepage
     regex(%r{latest official release.*? <b>v?(\d+(?:\.\d+)+)</b>}i)
   end
-
-  keg_only :versioned_formula
 
   depends_on "open-mpi"
 
@@ -22,6 +20,8 @@ class FftwAT339 < Formula
   fails_with :clang
 
   def install
+    ENV.runtime_cpu_detection
+
     args = [
       "--enable-shared",
       "--disable-debug",
@@ -35,7 +35,7 @@ class FftwAT339 < Formula
     # FFTW supports runtime detection of CPU capabilities, so it is safe to
     # use with --enable-avx and the code will still run on all CPUs
     simd_args = []
-    simd_args << "--enable-sse2" << "--enable-avx" if Hardware::CPU.intel?
+    simd_args += %w[--enable-sse2 --enable-avx --enable-avx2] if Hardware::CPU.intel?
 
     # single precision
     # enable-sse2, enable-avx and enable-avx2 work for both single and double precision
