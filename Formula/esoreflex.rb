@@ -17,7 +17,10 @@ class Esoreflex < Formula
   depends_on "python@3.9"
 
   def install
-    pkgshare.install Dir["*"]
+    require "fileutils"
+    pkgshare.install "kepler","common","outreach","kepler-tasks","directors","configuration-manager","module-manager","core","event-state","util","component-library","sms","data-handling","ssh","io","job","repository","authentication","module-manager-gui","gui","authentication-gui","ecogrid","dataone","dataturbine","opendap","actors","display-redirect","loader","r","build-area","esoreflex","esoreflex.jar"
+    FileUtils.rm "ptolemy/src/vendors/jogl/lib/natives/macosx-universal/libgluegen-rt.jnilib"
+    pkgshare.install "ptolemy"
     bin.install_symlink pkgshare/"esoreflex/bin/esoreflex"
     kepler_workflows = "~/KeplerData/workflows/MyWorkflows"
 
@@ -90,7 +93,7 @@ class Esoreflex < Formula
     end
 
     rm_r(pkgshare/"common/src")
-    rm_r(pkgshare/"ptolemy/src/bin/macContents/Contents/MacOS/JavaApplicationStub")
+    #rm_r(pkgshare/"ptolemy/src/bin/macContents/Contents/MacOS/JavaApplicationStub")
     rm_r(pkgshare/"build-area/resources/installer/launch4j")
     system "#{HOMEBREW_PREFIX}/bin/python3.9", "-m", "pip", "install", "astropy", "matplotlib"
   end
