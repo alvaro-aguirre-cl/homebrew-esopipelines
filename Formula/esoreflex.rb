@@ -4,7 +4,7 @@ class Esoreflex < Formula
   url "https://ftp.eso.org/pub/dfs/reflex/esoreflex-2.11.5.tar.gz"
   sha256 "65181046d00d00c1b66ce4e1493c430b7c2899b874f895d51f0dceaf34f1e1f6"
   license "GPL-2.0-or-later"
-  revision 1
+  revision 2
 
   livecheck do
     url :homepage
